@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CocoaTestTransition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5K-21-MoB">
+                                <rect key="frame" x="175" y="433" width="64" height="30"/>
+                                <state key="normal" title="Show cat"/>
+                                <connections>
+                                    <action selector="transition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GDA-BS-Xz1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Y5K-21-MoB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6TT-Hv-e5A"/>
+                            <constraint firstItem="Y5K-21-MoB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cg7-OM-Wn4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <segue destination="aby-i7-TvR" kind="show" identifier="ShowCat" id="Nh1-fD-MdN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
+        </scene>
+        <!--Cat View Controller-->
+        <scene sceneID="TEo-av-pZo">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="aby-i7-TvR" customClass="CatViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mPT-SO-fqG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="FFo-Km-uEL">
+                                <rect key="frame" x="30.5" y="301.5" width="353" height="293"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="293" id="3F5-is-Nfx"/>
+                                    <constraint firstAttribute="width" constant="353" id="Paj-Gk-MrC"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FFo-Km-uEL" firstAttribute="centerX" secondItem="mPT-SO-fqG" secondAttribute="centerX" id="YRf-eW-IvW"/>
+                            <constraint firstItem="FFo-Km-uEL" firstAttribute="centerY" secondItem="mPT-SO-fqG" secondAttribute="centerY" id="f1o-R2-fUK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kfp-9C-nOk"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RGD-2N-HeO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4LC-Li-r8v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="889.85507246376824" y="140.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cat.jpg" width="750" height="405.75"/>
+    </resources>
+</document>
